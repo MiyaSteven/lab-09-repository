@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');
-// const superagent = require('superagent');
+const superagent = require('superagent');
 
 //modules
 const client = require('./lib/client');
@@ -19,6 +19,7 @@ const PORT = process.env.PORT || 3001;
 //routes
 app.get('/location', getLocation);
 // app.get('/weather', getWeather);
+// app.get('/yelp', getYelp);
 // app.get('/events', getEvents);
 // app.get('/trails', getTrails);
 
