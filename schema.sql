@@ -7,5 +7,3 @@ CREATE TABLE locations (
 	latitude NUMERIC(10, 7),
 	longitude NUMERIC(10, 7)
 );
-
-INSERT INTO locations (search_query) VALUES ('seattle');

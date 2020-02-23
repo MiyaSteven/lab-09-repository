@@ -8,8 +8,8 @@ const cors = require('cors');
 
 //modules
 const client = require('./lib/client');
-const getLocation = require('./js/city');
-const getWeather = require('./js/weather');
+const getLocation = require('./lib/location/City');
+// const getWeather = require('./js/weather');
 
 const app = express();
 app.use(cors());
@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3001;
 
 //routes
 app.get('/location', getLocation);
-app.get('/weather', getWeather);
+// app.get('/weather', getWeather);
 // app.get('/events', getEvents);
 // app.get('/trails', getTrails);
 
@@ -52,6 +52,8 @@ app.get('*', (request, response) => {
 //   this.latitude = eventData.lat;
 //   this.longitude = eventData.lon;
 // }
+
+
 
 client.connect()
   .then( () => {
